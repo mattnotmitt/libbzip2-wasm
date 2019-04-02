@@ -1,0 +1,6 @@
+build/
+*.js
+*.wasm
+cmake-build-debug/
+.idea
+dist/

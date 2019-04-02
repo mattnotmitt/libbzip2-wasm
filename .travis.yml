@@ -10,3 +10,11 @@ before_install:
 script:
 - docker exec -it emscripten /bin/sh -c 'mkdir build && cd build && emconfigure cmake
   .. && emmake make'
+deploy:
+  provider: npm
+  email: matt@artemisbot.uk
+  api_key:
+    secure: ajwTrZrfdRshqYEfpFQflI81HF79uztBUMcMVLtJ0Hf0Ysgo10OiEUvUgQMOPns49RWtome1uEefTPIRsCP88P9iti6O8+yjdEsKKhqb7Gcq49xZjNAWJWhc77Hfq0hhNBN1ajpQgfL+0LD4HYq+oX3hYwf8M2IssQPjLoQDmh1v45IpfOOFW4PY9ybzcACvYiAmfyDWGdLlcK3X3WC+mn6B7Qm+vRjL6qKK8mXMibxs+o2M+PcCQS5IIwd5k29kQeQ0vSqyAegck6564e6p7pM+bSBWiyDlVTLBgRmMg258+gbhMSChxpmo+NDUuzDmL5Qq86Bnj5XdhingzayogToqVbfg7FcLt5Kp20kkfqfLyhNUQvS4vfzDCS4kMnw+hKIu8+Bt6KCM9YV6UU2SM2p9UfX4vTRPOIhk9Ehap7xDlRIT2lL5VskXDtFYSdSY1QBkWkxsFcZAtaRImsH/yLXGed56k8wZzY9lEEj9vQGN/R7biXYBw5Y9Mz0MwM29p0lNuYHi4pkAROB5N3yqB6Z1p0aRvRu/dt/HHylLG1WxtQj+7QQ8m1FhTtMwUjGERI2gk6iBxOMAU47XlCYlSXflCNqqyEf66AOVNW5wWc7jbvPH8RvxtI+uaEgbUGLvti59yfz8RiNKqcFBnxms1HNcYWzkw45fM/fdLjQTiVw=
+  on:
+    tags: true
+    repo: artemisbot/libbzip2-wasm
